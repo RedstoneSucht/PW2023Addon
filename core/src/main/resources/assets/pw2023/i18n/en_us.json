@@ -1,0 +1,59 @@
+{
+  "pw2023": {
+    "activity": {
+      "tab": "PW2023",
+      "title": {
+        "info": "region information",
+        "settings": "region settings",
+        "warning": "Since this region does not belong to your team, you cannot change any settings!"
+      },
+      "messages": {
+        "perms": "Berechtigungen für andere Teams:",
+        "notpwserver": "You are not on the official Projekt Weihnachten server!\nYou can find more information at:\n\nhttps://projekt-weihnachten.de/"
+        "unknowngamemode": {
+          "title": "Missing GPS signal",
+          "info": "Sorry, we couldn't find out where you are right now!\nTherefore, we can't show you any information about this area."
+        },
+        "noowner": "no owner",
+        "noname": "unnamed",
+        "owner": "owner: ",
+        "name": "name: ",
+        "noperms": "No permissions available"
+      }
+    },
+    "settings": {
+      "name": "Projekt Weihnachten 2023",
+      "enabled": {
+        "name": "Addon Enabled"
+      },
+      "gamemode": {
+        "name": "Show gamemode"
+      }
+    },
+    "hudWidgets": {
+      "online_global": {
+        "name": "Players (Global)"
+      },
+      "online_world": {
+        "name": "Players (World)"
+      },
+      "online_team": {
+        "name": "Players (Team)"
+      },
+      "claimpoints": {
+        "name": "Claimpoints"
+      },
+      "regionname": {
+        "name": "Region name"
+      }
+    }
+  },
+  "labymod": {
+    "hudWidgetCategory": {
+      "pw2023": {
+        "name": "Projekt Weihnachten",
+        "description": "Widgets for PW2023"
+      }
+    }
+  }
+}

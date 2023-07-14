@@ -1,0 +1,114 @@
+.perms-switch {
+  height: 100%;
+  width: 10%;
+}
+
+.non-interactable {
+  interactable: false;
+}
+
+.error-notpwserver {
+  font-size: 1.3;
+  text-color: #ff0000;
+  alignment-x: center;
+  alignment-y: center;
+}
+
+.error-gamemode-title {
+  text-color: #ff9900;
+}
+
+.error-gamemode-info {
+  text-color: #cccc00;
+}
+
+.gamemode-title {
+  font-size: 2;
+  top: 27%;
+  alignment-x: center;
+}
+
+.gamemode-info {
+  alignment-x: center;
+  top: 35%;
+}
+
+.gamemode-title-image {
+  font-size: 2;
+  top: 14%;
+  alignment-x: center;
+}
+
+.gamemode-info-image {
+  alignment-x: center;
+  top: 65%;
+}
+
+
+.gamemode-image {
+  alignment-x: center;
+  alignment-y: center;
+  object-fit: contain;
+  top: 38%;
+  width: 80%;
+  height: 45%;
+}
+
+.region-name {
+  font-size: 1.2;
+  alignment-x: center;
+  top: 20%;
+}
+
+.region-owner {
+  font-size: 1.2;
+  alignment-x: center;
+  top: 24%;
+}
+
+.perms-noperms-info {
+  font-size: 0.9;
+  top: 2%;
+  text-color: #ff0000;
+}
+
+.perms-other-team-info {
+  font-size: 1.5;
+  text-color: #ffff00;
+}
+
+.perms-scroll {
+  height: fit-content;
+  width: 70%;
+  alignment-x: center;
+  alignment-y: center;
+}
+
+.perms-title {
+  font-size: 2;
+  alignment-x: center;
+  top: 10%;
+}
+
+.perms-warning {
+  font-size: 0.8;
+  alignment-x: center;
+  top: 17%;
+  text-color: #ff2222;
+}
+
+.perms-settings {
+  height: 20%;
+  space-between-entries: 5;
+  width: 80%;
+  left: 30%;
+  top: 30%;
+}
+
+.perms-settings-entry {
+  height: 25%;
+  space-between-entries: 5;
+  width: 80%;
+  left: 10%;
+  top: 40%;
+}

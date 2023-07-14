@@ -4,18 +4,18 @@ plugins {
     id("net.labymod.gradle.addon")
 }
 
-group = "org.example"
+group = "de.projektweihnachten.laby"
 version = "1.0.0"
 
 java.toolchain.languageVersion.set(JavaLanguageVersion.of(17))
 
 labyMod {
-    defaultPackageName = "org.example" //change this to your main package name (used by all modules)
+    defaultPackageName = "de.projektweihnachten.laby.addon2023" //change this to your main package name (used by all modules)
     addonInfo {
-        namespace = "example"
-        displayName = "ExampleAddon"
-        author = "Example Author"
-        description = "Example Description"
+        namespace = "pw2023"
+        displayName = "Projekt Weihnachten 2023"
+        author = "Projekt Weihnachten/RedstoneSucht.de"
+        description = "Offizielles Addon für Projekt Weihnachten 2023"
         minecraftVersion = "*"
         version = System.getenv().getOrDefault("VERSION", "0.0.1")
     }
@@ -90,4 +90,8 @@ fun configureRun(provider: net.labymod.gradle.core.minecraft.provider.VersionPro
 
         minVersion = mixinMinVersion
     }
+}
+
+tasks.withType<JavaCompile> {
+    options.encoding = "UTF-8"
 }
