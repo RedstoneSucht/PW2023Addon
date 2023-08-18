@@ -1,5 +1,8 @@
 package de.projektweihnachten.laby.addon2023.activities;
 
+import de.projektweihnachten.laby.addon2023.PW2023Addon;
+import de.projektweihnachten.laby.addon2023.PW2023AddonConfig;
+import de.projektweihnachten.laby.addon2023.hud.HudDataManager;
 import net.labymod.api.client.component.Component;
 import net.labymod.api.client.gui.icon.Icon;
 import net.labymod.api.client.gui.navigation.elements.ScreenNavigationElement;
@@ -26,5 +29,11 @@ public class PW2023NavigationElement extends ScreenNavigationElement {
   @Override
   public String getWidgetId() {
     return "pw2023-activity-wrapper";
+  }
+
+  @Override
+  public boolean isVisible() {
+    PW2023AddonConfig config = PW2023Addon.getInstance().configuration();
+    return config.enabled().getOrDefault(true) && (config.getPermanav().getOrDefault(false) || RegionPermission.isPwserver());
   }
 }

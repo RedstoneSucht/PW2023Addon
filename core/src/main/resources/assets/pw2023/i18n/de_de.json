@@ -28,6 +28,9 @@
       },
       "gamemode": {
         "name": "Spielmodus anzeigen"
+      },
+      "permanav": {
+        "name": "PW2023 Navbar-Tab permanent anzeigen"
       }
     },
     "hudWidget": {
