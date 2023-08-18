@@ -41,7 +41,7 @@
 
 .gamemode-info-image {
   alignment-x: center;
-  top: 65%;
+  top: 70%;
 }
 
 
@@ -49,7 +49,7 @@
   alignment-x: center;
   alignment-y: center;
   object-fit: contain;
-  top: 38%;
+  top: 44%;
   width: 80%;
   height: 45%;
 }
