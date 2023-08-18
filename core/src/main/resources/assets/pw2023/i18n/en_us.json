@@ -9,7 +9,7 @@
       },
       "messages": {
         "perms": "Berechtigungen für andere Teams:",
-        "notpwserver": "You are not on the official Projekt Weihnachten server!\nYou can find more information at:\n\nhttps://projekt-weihnachten.de/"
+        "notpwserver": "You are not on the official Projekt Weihnachten server!\nYou can find more information at:\n\nhttps://projekt-weihnachten.de/",
         "unknowngamemode": {
           "title": "Missing GPS signal",
           "info": "Sorry, we couldn't find out where you are right now!\nTherefore, we can't show you any information about this area."
