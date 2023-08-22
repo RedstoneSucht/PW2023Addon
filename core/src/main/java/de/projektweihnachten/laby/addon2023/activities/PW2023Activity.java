@@ -118,7 +118,7 @@ public class PW2023Activity extends SimpleActivity {
         SwitchWidget switchWidget = SwitchWidget.create(new Switchable() {
           @Override
           public void switchValue(boolean value) {
-            final String command = "/melontown settings " + p.getCommandID() + " " + value;
+            final String command = p.getCommandID() + " " + value;
             try {
               PW2023Addon.getInstance().labyAPI().minecraft().chatExecutor().chat(command, false);
             } catch (NullPointerException ignored) {
@@ -127,7 +127,9 @@ public class PW2023Activity extends SimpleActivity {
           }
         });
 
-        if (!RegionPermission.isEditable()) {
+        switchWidget.setValue(p.getValue());
+
+        if (!RegionPermission.isEditable() || !p.isAllowed()) {
           switchWidget.addId("non-interactable");
         }
 

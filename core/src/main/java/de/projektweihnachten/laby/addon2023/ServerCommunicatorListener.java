@@ -23,7 +23,7 @@ public class ServerCommunicatorListener {
     RegionPermission.setGamemodeName(null);
     RegionPermission.setGamemodeUrl(null);
     RegionPermission.setGamemodeInfo(null);
-    RegionPermission.setRegion(null, null, new JsonArray());
+    RegionPermission.setRegion(null, null, new JsonArray(),false);
   }
 
   @Subscribe
@@ -43,7 +43,7 @@ public class ServerCommunicatorListener {
           HudDataManager.setClaimPoints(payload.get("claimpoints").getAsInt());
           JsonObject data = payload.get("data").getAsJsonObject();
           RegionPermission.setRegion(jsonStringNull(data.get("name")),
-              jsonStringNull(data.get("owner")), data.get("perms").getAsJsonArray());
+              jsonStringNull(data.get("owner")), data.get("perms").getAsJsonArray(),data.get("editable").getAsBoolean());
           HudDataManager.setRegionName(RegionPermission.getRegionName());
 
         } else if (key.equalsIgnoreCase("server")) {

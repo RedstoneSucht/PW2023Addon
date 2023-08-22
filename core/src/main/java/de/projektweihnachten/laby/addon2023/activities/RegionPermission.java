@@ -15,6 +15,8 @@ public class RegionPermission {
 
   private final String commandID;
   private final String name;
+  private final boolean value;
+  private final boolean allowed;
 
 
   private static String gamemodeName = null;
@@ -26,9 +28,11 @@ public class RegionPermission {
   private static String regionOwner = null;
   private static ArrayList<RegionPermission> perms = new ArrayList<RegionPermission>();
 
-  public RegionPermission(String commandID, String name) {
+  public RegionPermission(String commandID, String name, boolean value, boolean allowed) {
     this.commandID = commandID;
     this.name = name;
+    this.value = value;
+    this.allowed = allowed;
 
   }
 
@@ -100,9 +104,10 @@ public class RegionPermission {
     return name;
   }
 
-  public static void setRegion(String regionName, String regionOwner, JsonArray permissions) {
+  public static void setRegion(String regionName, String regionOwner, JsonArray permissions, boolean editable) {
     RegionPermission.regionName = regionName;
     RegionPermission.regionOwner = regionOwner;
+    RegionPermission.editable = editable;
 
     ArrayList<RegionPermission> perms = new ArrayList<>();
 
@@ -111,7 +116,7 @@ public class RegionPermission {
         if (p.isJsonObject()) {
           JsonObject d = p.getAsJsonObject();
           perms.add(
-              new RegionPermission(jsonStringNull(d.get("name")), jsonStringNull(d.get("owner"))));
+              new RegionPermission(jsonStringNull(d.get("cmd")), jsonStringNull(d.get("name")), d.get("value").getAsBoolean(), d.get("allowed").getAsBoolean()));
         }
       } catch (Exception e) {
         e.printStackTrace();
@@ -119,5 +124,13 @@ public class RegionPermission {
     }
 
     RegionPermission.perms = perms;
+  }
+
+  public boolean getValue() {
+    return value;
+  }
+
+  public boolean isAllowed() {
+    return allowed;
   }
 }
