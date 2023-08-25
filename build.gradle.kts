@@ -16,7 +16,7 @@ labyMod {
         displayName = "Projekt Weihnachten 2023"
         author = "Projekt Weihnachten/RedstoneSucht.de"
         description = "Offizielles Addon für Projekt Weihnachten 2023"
-        minecraftVersion = "*"
+        minecraftVersion = "*"  //Support all Versions
         version = System.getenv().getOrDefault("VERSION", "0.0.1")
     }
 
