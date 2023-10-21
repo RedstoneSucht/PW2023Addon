@@ -78,10 +78,11 @@
 }
 
 .perms-scroll {
-  height: fit-content;
+  height: 68%;
   width: 70%;
   alignment-x: center;
-  alignment-y: center;
+  top: 30%;
+  alignment-y: top;
 }
 
 .perms-title {
@@ -98,7 +99,7 @@
 }
 
 .perms-settings {
-  height: 20%;
+  height: fit-content;
   space-between-entries: 5;
   width: 80%;
   left: 30%;
@@ -106,7 +107,7 @@
 }
 
 .perms-settings-entry {
-  height: 25%;
+  height: 15;
   space-between-entries: 5;
   width: 80%;
   left: 10%;

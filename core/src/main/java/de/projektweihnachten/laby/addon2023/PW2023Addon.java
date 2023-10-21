@@ -21,6 +21,12 @@ public class PW2023Addon extends LabyAddon<PW2023AddonConfig> {
     return instance;
   }
 
+  private PW2023NavigationElement nav =null;
+
+  public PW2023NavigationElement getNav() {
+    return nav;
+  }
+
   @Override
   protected void enable() {
     instance = this;
@@ -28,7 +34,8 @@ public class PW2023Addon extends LabyAddon<PW2023AddonConfig> {
 
     this.labyAPI().eventBus().registerListener(new ServerCommunicatorListener());
 
-    this.labyAPI().navigationService().register(new PW2023NavigationElement(hudIcon));
+    nav = new PW2023NavigationElement(hudIcon);
+    this.labyAPI().navigationService().register(nav);
 
     this.labyAPI().hudWidgetRegistry().categoryRegistry().register(HudDataManager.getCategory());
 

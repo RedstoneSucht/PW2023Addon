@@ -45,6 +45,7 @@ public class ServerCommunicatorListener {
           RegionPermission.setRegion(jsonStringNull(data.get("name")),
               jsonStringNull(data.get("owner")), data.get("perms").getAsJsonArray(),data.get("editable").getAsBoolean());
           HudDataManager.setRegionName(RegionPermission.getRegionName());
+          PW2023Addon.getInstance().getNav().reloadActivity();
 
         } else if (key.equalsIgnoreCase("server")) {
           HudDataManager.setOnlineGlobal(payload.get("global").getAsInt());

@@ -3,6 +3,7 @@ package de.projektweihnachten.laby.addon2023.activities;
 import de.projektweihnachten.laby.addon2023.PW2023Addon;
 import de.projektweihnachten.laby.addon2023.PW2023AddonConfig;
 import de.projektweihnachten.laby.addon2023.hud.HudDataManager;
+import net.labymod.api.Laby;
 import net.labymod.api.client.component.Component;
 import net.labymod.api.client.gui.icon.Icon;
 import net.labymod.api.client.gui.navigation.elements.ScreenNavigationElement;
@@ -35,5 +36,14 @@ public class PW2023NavigationElement extends ScreenNavigationElement {
   public boolean isVisible() {
     PW2023AddonConfig config = PW2023Addon.getInstance().configuration();
     return config.enabled().getOrDefault(true) && (config.getPermanav().getOrDefault(false) || RegionPermission.isPwserver());
+  }
+
+  public void reloadActivity() {
+    Laby.labyAPI().minecraft().executeOnRenderThread(new Runnable() {
+      @Override
+      public void run() {
+        ((PW2023Activity) getScreen()).reload();
+      }
+    });
   }
 }

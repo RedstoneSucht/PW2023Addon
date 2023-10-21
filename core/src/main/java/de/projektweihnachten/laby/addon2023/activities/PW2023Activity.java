@@ -123,7 +123,6 @@ public class PW2023Activity extends SimpleActivity {
               PW2023Addon.getInstance().labyAPI().minecraft().chatExecutor().chat(command, false);
             } catch (NullPointerException ignored) {
             }
-            PW2023Addon.getInstance().logger().debug(command);
           }
         });
 
@@ -151,7 +150,7 @@ public class PW2023Activity extends SimpleActivity {
       ScrollWidget scrollWidget = new ScrollWidget(permsSettings);
       scrollWidget.addId("perms-scroll");
 
-      this.document().addChild(permsSettings);
+      this.document().addChild(scrollWidget);
     }
   }
 }
